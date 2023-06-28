@@ -1,39 +1,51 @@
 body {
   background: #f2f2f2;
+  font-family: 'Arial', sans-serif;
 }
+
 .first {
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
+
+.title {
+  font-size: 24px;
+  margin: 0;
+}
+
 .container {
-  width: 99vw;
-  height: 60vh;
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  overflow: auto;
 }
 
-
 main {
-  max-width: 550px;
+  max-width: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid 4px;
   border-radius: 20px;
-  border-collapse: collapse;
   border-color: rgb(0, 0, 0);
-
+  padding: 20px;
+  background-color: #fff;
 }
 
 .resume {
-  display: flex;
+  display: grid;
   padding: 10px 0;
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   width: 100%;
-  justify-content: center;
+  justify-items: center;
   flex-wrap: wrap;
 }
 
@@ -48,33 +60,37 @@ main {
   padding: 10px;
   width: 150px;
   text-align: center;
-
 }
 
-span {
+.resume span {
   font-size: 24px;
+  font-weight: bold;
+  margin-top: 6px;
 }
 
 .entrada {
-  background-color: yellowgreen;
+  background-color: #57bf84;
+  color: #fff;
 }
 
 .saida {
-  background-color: #D83121;
+  background-color: #e94b35;
+  color: #fff;
 }
 
 .vltotal {
-  background-color: slategray;
-
+  background-color: #495057;
+  color: #fff;
 }
 
 .newItem {
   display: flex;
   gap: 10px;
-  align-items: end;
+  align-items: center;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .divDesc,
@@ -83,31 +99,38 @@ span {
   font-family: "Trebuchet MS", Verdana, sans-serif;
   display: flex;
   flex-direction: column;
-
 }
 
 .newItem>button {
   background-color: #072955;
   color: white;
   border: none;
-  padding: 0 15px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   height: 34px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.newItem>button:hover {
+  background-color: #064080;
 }
 
 input,
 select {
-  padding: 5px;
+  padding: 10px;
   border-radius: 6px;
-
-
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
 }
 
 .divTable {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 table {
@@ -115,6 +138,8 @@ table {
   padding: 20px 0;
   border-radius: 5px;
   font-size: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 th {
@@ -124,6 +149,10 @@ th {
   padding-bottom: 5px;
   background-color: #000000;
   color: white;
+}
+
+td {
+  padding: 10px;
 }
 
 i {
@@ -146,6 +175,7 @@ i {
 .columnAction>button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .columnAmount {
